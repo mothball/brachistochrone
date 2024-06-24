@@ -1,1 +1,1 @@
-# brachistochrone
+# Brachistochrone
