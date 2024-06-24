@@ -107,7 +107,7 @@ def ramp_time_to_reach_x(x, x_f, y_i, g):
     return np.sqrt(2 * s / a)
 
 # Streamlit application layout
-st.title('Brachistochrone Problem Solver')
+st.title('Brachistochrone vs. Straight Ramp')
 
 # Sliders for end points
 g = float(st.sidebar.text_input("Gravity (m/s^2)", 9.81))
