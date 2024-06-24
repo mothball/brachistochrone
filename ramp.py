@@ -26,7 +26,8 @@ def brachistochrone_time_and_curve(r, theta_f, y_i, g=9.81, num_points=1000):
     time = np.zeros_like(theta)
     for i in range(1, len(theta)):
         ds = np.sqrt((x[i] - x[i - 1])**2 + (y[i] - y[i - 1])**2)
-        v = np.sqrt(2 * g * (y_i - y[i]))
+        avg_y = (y[i] + y[i-1]) / 2
+        v = np.sqrt(2 * g * (y_i - avg_y))
         dt = ds / v if v > 0 else 0  # Avoid division by zero
         time[i] = time[i - 1] + dt
 
