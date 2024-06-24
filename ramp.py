@@ -149,7 +149,7 @@ st.write("Ball Locations:")
 # Define the range for x and compute y for each x using the solved r
 x_values = np.arange(0, x_f + 1, 5)
 y_values = [y_i - r * (1 - np.cos(find_theta_for_x(x, r))) for x in x_values]
-y_ramp = [22 - (y_i/x_f)*x for x in x_values]
+y_ramp = [y_i - (y_i/x_f)*x for x in x_values]
 
 brachistochrone_times = np.interp(x_values, x, t)
 ramp_times = [ramp_time_to_reach_x(x, x_f, y_i, g) for x in x_values]
